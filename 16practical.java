@@ -26,3 +26,11 @@ public class tryHeapsort {
 }
 
 //Build Heap Bottom-up
+static void BottomUp() {
+
+  for (int i = size/2 - 1; i >= 0; i--) {
+    Min_heap(i);
+   }
+}
+
+//Build Heap Top-Down
