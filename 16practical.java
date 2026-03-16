@@ -34,3 +34,14 @@ static void BottomUp() {
 }
 
 //Build Heap Top-Down
+static void insert(String word) {
+
+  size = 0;
+
+for(String word : words) {
+  insert(word);
+    }
+}
+
+//Heap Sort
+
