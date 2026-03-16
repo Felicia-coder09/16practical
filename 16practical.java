@@ -11,4 +11,18 @@ public class tryHeapsort {
     heap[j] = temp;
   }
   //Minimum heap
+  static void Min_heap(int i) {
+
+    int smallest = i;
+    int left = 2*i + 1;
+    int right = 2*i + 2;
+
+    if(left < size && heap[left].compareTo(heap[smallest]) < 0)
+      smallest = left;
+
+    if(right < size && heap[right].compareTo(heap[smallest]) < 0)
+      smallest = right;
+  }
 }
+
+//Build Heap Bottom-up
