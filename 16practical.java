@@ -44,4 +44,67 @@ for(String word : words) {
 }
 
 //Heap Sort
+static void heapSort() {
 
+  int originalSize = size;
+
+  for (int i = size-1; i > 0; i--) {
+
+    swap(0, i);
+    size--;
+
+    Min_heap(0);
+  }
+
+  size = originalSize;
+}
+
+static void printArray(String[] arr) {
+
+  for(Sting s : arr) {
+    System.out.print(s + " ");
+  }
+  System.out.println();
+}
+
+public static void main(String[] args) {
+
+  Scanner input = new Scanner(System.in);
+
+  System.out.print("Please enter number of words (Words must be not more than 20): ");
+
+  for(int i = 0; i < n; i++) {
+    words[i] = imput.nextLine();
+  }
+
+  heap = Array.copyOf(words, words.length);
+  size = heap.length;
+
+  long startBottom = System.nanoTime();
+
+  BottomUp();
+  heapSort();
+
+  long endBottom = System.nanoTime();
+
+  long bottomTime = endBottom - startBottom;
+
+  System.out.println("\nSorted words (Bottom-Up): ");
+  printArray(heap);
+
+  heap = new String[words.length];
+
+  long startTop = System.nanoTime();
+
+  Top_down(words);
+  heapSort();
+
+  long endTop = System.nanoTime();
+
+  long topTime = endTop - startTop;
+
+  System.out.println("\nSorted words (Top-Down): ");
+  printArray(heap);
+
+  
+}
